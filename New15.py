@@ -156,6 +156,7 @@ fx = st.sidebar.number_input(fx_labels[country], min_value=0.0001, value=float(f
 # US Overlay (Federal) defaults in sidebar
 # -----------------------------
 st.sidebar.subheader("🇺🇸 US Federal (Overlay)")
+us_citizen_gc = st.sidebar.checkbox("US Citizen/GC Holder (Apply US Overlay)", value=False)
 feie = st.sidebar.number_input("FEIE (USD)", min_value=0, value=126_500, step=500, help="Foreign Earned Income Exclusion (applied for simple estimate)", disabled=(country == "United States" or not us_citizen_gc))
 std_ded = st.sidebar.number_input("Standard Deduction (USD)", min_value=0, value=14_600, step=100)
 
