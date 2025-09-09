@@ -193,7 +193,7 @@ with st.container(border=True):
     with c4:
         signon = st.number_input("SignOn Bonus (if any)", min_value=0.0, value=0.0, step=1_000.0, format="%.0f")
     with c5:
-        y1_rsu = st.number_input("Y1 RSU Value", min_value=0.0, value=5_000_000.0, step=1_000.0, format="%.0f")
+        y1_rsu = st.number_input("Y1 RSU Value", min_value=0.0, value=0.0, step=1_000.0, format="%.0f")
 
 variable_amt = base * (var_pct / 100.0)
 earned = base + variable_amt + crsu + signon
@@ -445,7 +445,7 @@ with tab2:
     if not us_overlay_allowed:
         st.info("US overlay is disabled when the work country is United States.")
     elif not us_overlay:
-        st.info("Turn ON the 'US Citizen/ GC Holder' toggle in the sidebar to apply US federal and state taxes for expats.")
+        st.info("Turn ON the 'US Citizen/ GC Holder' toggle in the sidebar to apply US federal and state taxes for expats")
     elif fx <= 0:
         st.error("FX rate must be > 0 to compute US overlay.")
     else:
