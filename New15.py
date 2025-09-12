@@ -185,7 +185,7 @@ with st.container(border=True):
     st.subheader("📝 Compensation Input")
     c1, c2, c3, c4, c5 = st.columns(5)
     with c1:
-        base = st.number_input("Base Pay", min_value=0.0, value=1_000_000.0, step=1_000.0, format="%.0f")
+        base = st.number_input("Base Pay", min_value=0.0, value=0.0, step=1_000.0, format="%.0f")
     with c2:
         var_pct = st.number_input("Variable % of Base", min_value=0.0, max_value=100.0, value=10.0, step=0.5, format="%.1f")
     with c3:
